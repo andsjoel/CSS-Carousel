@@ -1,0 +1,85 @@
+:root {
+    --primary-bg: #311d2f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input {
+    display: none;
+}
+
+section {
+    background-color: var(--primary-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.card {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.card img {
+    width: 512px;
+    border-radius: 15px;
+}
+
+.cards {
+    position: relative;
+    width: 512px;
+}
+
+#item-1:checked ~ .cards #img-5,
+#item-2:checked ~ .cards #img-1,
+#item-3:checked ~ .cards #img-2,
+#item-4:checked ~ .cards #img-3,
+#item-5:checked ~ .cards #img-4 {
+    transform: translateX(-40%) scale(0.8);
+    z-index: 1;
+}
+
+#item-1:checked ~ .cards #img-4,
+#item-2:checked ~ .cards #img-5,
+#item-3:checked ~ .cards #img-1,
+#item-4:checked ~ .cards #img-2,
+#item-5:checked ~ .cards #img-3 {
+    transform: translateX(-70%) scale(0.5);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #img-3,
+#item-2:checked ~ .cards #img-4,
+#item-3:checked ~ .cards #img-5,
+#item-4:checked ~ .cards #img-1,
+#item-5:checked ~ .cards #img-2 {
+    transform: translateX(70%) scale(0.5);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #img-2,
+#item-2:checked ~ .cards #img-3,
+#item-3:checked ~ .cards #img-4,
+#item-4:checked ~ .cards #img-5,
+#item-5:checked ~ .cards #img-1 {
+    transform: translateX(40%) scale(0.8);
+    z-index: 1;
+}
+
+#item-1:checked ~ .cards #img-1,
+#item-2:checked ~ .cards #img-2,
+#item-3:checked ~ .cards #img-3,
+#item-4:checked ~ .cards #img-4,
+#item-5:checked ~ .cards #img-5 {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 2;
+}
