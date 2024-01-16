@@ -1,5 +1,5 @@
 :root {
-    --primary-bg: #311d2f;
+    --primary-bg: #7a82b4;
 }
 
 * {
@@ -12,12 +12,18 @@ input {
     display: none;
 }
 
-section {
-    background-color: var(--primary-bg);
+body {
+    background: var(--primary-bg);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
 }
 
 .card {
@@ -28,6 +34,7 @@ section {
 
 .card img {
     width: 512px;
+    width: 100%;
     border-radius: 15px;
 }
 
